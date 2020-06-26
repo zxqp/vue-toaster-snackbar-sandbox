@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-toaster-snackbar@1.0.1/dist/vueToaster.umd.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/vue-toaster-snackbar@1.0.1/public/toast.css"
+    />
+    <title>Vue ToastSnackbar - Direct Usage Demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <Toast></Toast>
+
+      <div>
+        <h1>{{ title }}</h1>
+        <h2>{{ description }}</h2>
+
+        <div style="margin-top:50px">
+          <button v-on:click="snackbar">Trigger Snackbar</button>
+          <button v-on:click="block">Trigger Block</button>
+          <button v-on:click="custom">Trigger Custom Toast</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          title: "Vue ToastSnackbar",
+          description: "Direct Usage demo!"
+        },
+        methods: {
+          snackbar() {
+            this.$toast.snackbar("success", "message");
+          },
+          block() {
+            this.$toast.block("success", "message", "description");
+          },
+          custom() {
+            toastMessage = {
+              toastType: "block",
+              position: "bottomRight",
+              status: "success",
+              message: "Title 2",
+              description: "Description",
+              timeout: 5000,
+              showProgress: true,
+              progress: 0
+            };
+            this.$toast.custom(toastMessage);
+          }
+        },
+        mounted() {}
+      });
+    </script>
+  </body>
+</html>

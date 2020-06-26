@@ -1,0 +1,24 @@
+{
+  "name": "toastsnackbar-direct-usage-demo",
+  "version": "1.0.0",
+  "description": "Using Vue ToastSnackbar library directly in HTML",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo This is a static template, there is no bundler or bundling involved!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxqp/vue-toaster-snackbar.git"
+  },
+  "keywords": ["vue toaster", "snackbar"],
+  "author": "Suresh Babu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zxqp/vue-toaster-snackbar/issues"
+  },
+  "homepage": "https://github.com/zxqp/vue-toaster-snackbar#readme",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}
